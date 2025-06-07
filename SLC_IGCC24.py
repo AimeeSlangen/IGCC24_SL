@@ -228,7 +228,7 @@ final_series=np.zeros([124,3])
 final_series[:,0]=gmsl_yrs
 final_series[:,1]=gmsl_series
 final_series[:,2]=delta_errors
-with open('IGCC_2025_GMSL_ensemble.csv','w', newline='') as csvfile:
+with open('IGCC_2024_GMSL_ensemble.csv','w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(headers)        
     writer.writerows(final_series)
@@ -273,7 +273,7 @@ ax.set_xlabel('Time (years)', fontsize=fs+2)
 ax.set_xlim(1901.5, 2024.5)
 
 fig.tight_layout()
-fig.savefig('SLC_figA_ts_IGCC25.png', bbox_inches='tight')
+fig.savefig('SLC_figA_ts_IGCC24.png', bbox_inches='tight')
 
 
 #%% Plot Figure B - rates
@@ -425,6 +425,6 @@ ax2.set_xticklabels(labels,rotation=45, fontsize=fs)
 
 
 fig2.tight_layout()
-fig2.savefig('SLC_figB_trends_IGCC25.png', bbox_inches='tight')
+fig2.savefig('SLC_figB_trends_IGCC24.png', bbox_inches='tight')
 
 
