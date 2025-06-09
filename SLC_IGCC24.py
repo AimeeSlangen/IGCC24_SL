@@ -239,8 +239,8 @@ yrs_tg, CW2011, HA2015, DA2019, FR2020 = read_tidegauge_indiv()
     
     
 #%% plot Figure A - the combined timeseries
-fig = plt.figure(dpi=600, figsize=(8,6))
-ax=fig.add_subplot()
+fig = plt.figure(dpi=600, figsize=(13,5))
+ax=fig.add_subplot(1,2,1)
 fs=8
 
 
@@ -272,8 +272,6 @@ ax.set_ylabel('GMSLR (mm)', fontsize=fs+2)
 ax.set_xlabel('Time (years)', fontsize=fs+2)
 ax.set_xlim(1901.5, 2024.5)
 
-fig.tight_layout()
-fig.savefig('SLC_figA_ts_IGCC24.png', bbox_inches='tight')
 
 
 #%% Plot Figure B - rates
@@ -352,8 +350,7 @@ for jj in fyr:
 
 
 # plotting error bar trend figure
-fig2 = plt.figure(dpi=600, figsize=(8,6))
-ax2=fig2.add_subplot()
+ax2=fig.add_subplot(1,2,2)
 fs=8
 
 alpha = 0.3
@@ -424,7 +421,7 @@ ax2.set_xticks([0, 1, 2, 3, 4, 5, 6, 7])
 ax2.set_xticklabels(labels,rotation=45, fontsize=fs)
 
 
-fig2.tight_layout()
-fig2.savefig('SLC_figB_trends_IGCC24.png', bbox_inches='tight')
+fig.tight_layout()
+fig.savefig('SLC_figAB_IGCC24.png', bbox_inches='tight')
 
 
